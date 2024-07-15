@@ -1,0 +1,22 @@
+<%- include('./partials/header')%>
+<%- include('./partials/nav2')%>
+
+<h2 class="text-center text-3xl font-bold mb-10 mt-20">Login To SquareSpace</h2>
+<form action="/users/login" method="post" class="w-[50vw] m-auto">
+   <div class="flex w-full justify-between">
+    <div class="w-[45%]">
+        <label for="username" class="uppercase text-[14px] font-bold text-gray-500 tracking-wider">UserName</label>
+        <input type="text" name="username" placeholder="Username" id="username" class="w-full py-2 outline-none border-b-2 mb-5">
+    </div>
+    <div class="w-[45%]">
+        <label for="password" class="uppercase text-[14px] font-bold text-gray-500 tracking-wider">Password</label>
+        <input type="password" name="password" placeholder="Password" id="password" class="w-full py-2 outline-none border-b-2 mb-5">
+    </div>
+   </div>
+   <button class="w-full bg-black text-white py-2 text-xl mt-5">LOG IN</button>
+   <p class="text-center mt-10 font-[600]"><a href="/confirm-email">CAN'T LOG IN?</a></p>
+   <p class="text-center mt-10 text-gray-500 font-[500]">Secure Login with reCAPTCHA subject to Google <br> Terms & Privacy</p>
+</form>
+
+
+<%- include('./partials/footer')%>
