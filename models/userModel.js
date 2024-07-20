@@ -16,6 +16,26 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String
     },
+    profilepic:{
+        type:String,
+        default:'https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D'
+    },
+    backgroundImage:{
+        type:String,
+        default:'https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D'
+    },
+    bio:{
+        type:String,
+        default:"Blogger"
+    },
+    blogs:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"blog"
+    }],
+    comments:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"comment"
+    }],
 })
 
 userSchema.plugin(plm)

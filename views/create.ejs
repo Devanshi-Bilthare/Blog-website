@@ -1,0 +1,24 @@
+<%- include('./partials/header')%>
+<%- include('./partials/nav')%>
+
+<h2 class="text-center text-3xl font-bold mb-10 mt-20">Create Blog</h2>
+<form action="/blogs/create" method="post" enctype="multipart/form-data" class="w-[50vw] m-auto">
+    <div class="w-full flex justify-between">
+        <div class="w-[48%]">
+            <label for="title" class="uppercase text-[14px] font-bold text-gray-500 tracking-wider">Blog Title</label>
+            <input type="text" name="title" placeholder="Blog Title" id="title" class="w-full py-2 outline-none border-b-2 mb-5">
+        </div>
+        <div class="w-[48%]">
+            <label for="description" class="uppercase text-[14px] font-bold text-gray-500 tracking-wider">Blog Description</label>
+            <input type="text" name="description" placeholder="blog description" id="description" class="w-full py-2 outline-none border-b-2 mb-5">
+        </div>
+    </div>
+    <label for="blogImage" class="uppercase text-[14px] font-bold text-gray-500 tracking-wider">Blog Image</label>
+    <input type="file" name="blogImage" placeholder="blogImage" id="blogImage" class="w-full py-2 outline-none border-b-2 mb-5">
+    <label for="details" class="uppercase text-[14px] font-bold text-gray-500 tracking-wider">Blog Details</label>
+    <textarea type="text" name="details" placeholder="blog details" id="details" rows="5" class="w-full py-2 outline-none border-b-2 mb-5"></textarea>
+   <button class="w-full bg-black text-white py-2 text-xl mt-5">Create Blog </button>
+</form>
+
+
+<%- include('./partials/footer')%>

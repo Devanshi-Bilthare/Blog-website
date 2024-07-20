@@ -1,0 +1,10 @@
+<div class="w-[70%] flex flex-wrap gap-10 px-5 m-auto my-20">
+    <%user.blogs.forEach((blog) => { %>
+        <div class="w-[30%] h-[50vh] bg-white p-2 border-2 border-gray-200 hover:scale-[1.02] transition-all cursor-pointer">
+            <img src="<%= blog.blogImage%>" class="w-full h-[70%] object-cover object-between" alt="">
+            <h2 class="text-xl font-[500] uppercase mt-5 underline hover:text-stone-500"><a href="/blogs/blogDetail/<%= blog._id%>"><%= blog.title%></a></h2>
+            <h3 class="capitalize text-gray-600"><%= blog.description%></h3>
+        </div>
+
+    <%})%>
+</div>

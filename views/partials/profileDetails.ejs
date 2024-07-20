@@ -1,0 +1,20 @@
+<div class="w-[70%] h-[40vh] m-auto relative p-1">
+    <img src="<%= user.backgroundImage%>" alt="back cover" class="w-full h-full object-cover absolute -z-10">
+    <img src="<%= user.profilepic%>" alt="profile image" class="w-[10vw] h-[10vw] rounded-full mt-[30vh] ms-[2vw] border-4 border-black object-cover">
+    
+</div>
+
+<div class="mt-5">
+    <button class="ms-[70vw] px-5 py-2 bg-black text-white rounded-[5px]">
+        <a href="/users/edit-profile/<%= user._id%>">Edit Profile</a>
+    </button>
+    <button class="ms-5 px-5 py-2 bg-black text-white rounded-[5px]">
+        <a href="/users/logout">Logout</a>
+    </button>
+</div>
+
+<div class="w-[70%] m-auto mt-[5vh] px-10">
+    <h2 class="text-2xl font-[500] capitalize"><%= user.name%></h2>
+    <p class="text-[md] mt-[-4px] lowercase"><%= user.username%></p>
+    <h3 class="mt-2 uppercase"><%= user.bio%></h3>
+</div>

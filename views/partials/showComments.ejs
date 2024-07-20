@@ -1,0 +1,8 @@
+<div class="w-[70%] m-auto my-20">
+    <%blog.comments.forEach((comment)=>{%>
+        <div class="flex gap-10 justify-between w-full items-end mb-10">
+            <img src="<%= comment.userImage%>" alt="user profilepic" class="w-[70px] h-[70px] rounded-full object-cover object-center">
+            <p class="w-[95%] outline-none border-b-2 h-max capitalize mb-2 py-2"><%= comment.commentText%></p>
+        </div>
+    <%})%>
+</div>
